@@ -9,12 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="userdashboard.css">
     <title>Dashboard</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/Rectangle 3.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -30,36 +30,39 @@
                     <input id="search-bar" class="form-control w-50" type="search" placeholder="Search posts" aria-label="Search">
                 </div>
                 <div class="d-flex ms-auto">
-                    <!-- Two Buttons on the Right with a Gap -->
+                    <!-- Buttons on the Right with a Gap -->
                     <button id="dash-btn" class="btn btn-primary me-3" type="button">My Dashboard</button>
                     <button id="auth-btn" class="btn btn-secondary" type="button">LOGIN/REGISTER</button>
                 </div>
             </div>
         </div>
     </nav>
+
     <!-- Create Post Section -->
-    <form id="create-post-form">
-        <input type="text" name="title" id="post-title" placeholder="Post Title" class="form-control mb-2" required>
-        <textarea name="content" id="post-content" placeholder="Post Content" class="form-control mb-2" required></textarea>
-        <select name="category" id="post-category" class="form-control mb-2" required>
-            <option value="Technology">Technology</option>
-            <option value="Web">Web</option>
-            <option value="Design">Design</option>
-            <option value="Programming">Programming</option>
-        </select>
-        <button type="submit" class="btn btn-primary">Create Post</button>
-    </form>
+    <section id="create-post-section" class="container mt-5">
+        <h3>Create a New Post</h3>
+        <form id="create-post-form" class="mt-4">
+            <input type="text" name="title" id="post-title" placeholder="Post Title" class="form-control mb-3" required>
+            <textarea name="content" id="post-content" placeholder="Post Content" class="form-control mb-3" required></textarea>
+            <select name="category" id="post-category" class="form-control mb-3" required>
+                <option value="Technology">Technology</option>
+                <option value="Web">Web</option>
+                <option value="Design">Design</option>
+                <option value="Programming">Programming</option>
+            </select>
+            <button type="submit" class="btn btn-success w-100">Create Post</button>
+        </form>
+    </section>
 
     <!-- User Posts Section -->
-    <section id="user-posts">
+    <section id="user-posts" class="container mt-5">
         <h2>Your Posts</h2>
-        <div id="posts-list"></div>
+        <div id="posts-list" class="row"></div>
     </section>
 
     <script type="module" src="dashboard.js"></script>
     <script type="module" src="userdashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 
 </html>

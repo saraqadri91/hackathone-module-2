@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/Rectangle 3.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -28,25 +29,34 @@
                 <div class="d-flex w-100 justify-content-center">
                     <!-- Centered Search Bar -->
                     <input id="search-bar" class="form-control w-50" type="search" placeholder="Search posts" aria-label="Search">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Categories will be rendered here -->
+                        </ul>
+                    </li>
                 </div>
                 <div class="d-flex ms-auto">
                     <!-- Two Buttons on the Right with a Gap -->
-                    <button id="dash-btn" class="btn btn-primary me-3" type="button">My Dashboard</button>
-                    <button id="auth-btn" class="btn btn-secondary" type="button">LOGIN/REGISTER</button>
+                    <button id="dash-btn" class="  me-3 button-28" type="button">My Dashboard</button>
+                    
+                    <button id="auth-btn" class="  button-28" type="button">LOGIN/REGISTER</button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- User Posts Section -->
-    <section id="user-posts">
+    <section id="user-posts" class="container mt-5">
         <h2>Blog Topics</h2>
         <div id="category-list" class="list-group mb-3"></div> <!-- Category list will appear here -->
         <h3>Posts</h3>
-        <div id="posts-container"></div> <!-- Posts will appear here -->
+        <div id="posts-container" class="row"></div> <!-- Posts will appear here -->
     </section>
-</body>
 
-<script type="module" src="dashboard.js"></script>
+    <script type="module" src="dashboard.js"></script>
+</body>
 
 </html>
