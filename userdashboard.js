@@ -167,5 +167,7 @@ function addEditDeleteEventListeners() {
         });
     });
 }
-
+document.getElementById("das-btn").addEventListener("click",()=>{
+    window.location.href ="index.html"
+})
 
