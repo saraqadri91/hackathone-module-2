@@ -37,16 +37,29 @@
             </div>
         </div>
     </nav>
+    <!-- Create Post Section -->
+    <form id="create-post-form">
+        <input type="text" name="title" id="post-title" placeholder="Post Title" class="form-control mb-2" required>
+        <textarea name="content" id="post-content" placeholder="Post Content" class="form-control mb-2" required></textarea>
+        <select name="category" id="post-category" class="form-control mb-2" required>
+            <option value="Technology">Technology</option>
+            <option value="Web">Web</option>
+            <option value="Design">Design</option>
+            <option value="Programming">Programming</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
 
     <!-- User Posts Section -->
     <section id="user-posts">
-        <h2>Blog Topics</h2>
-        <div id="category-list" class="list-group mb-3"></div> <!-- Category list will appear here -->
-        <h3>Posts</h3>
-        <div id="posts-container"></div> <!-- Posts will appear here -->
+        <h2>Your Posts</h2>
+        <div id="posts-list"></div>
     </section>
-</body>
 
-<script type="module" src="dashboard.js"></script>
+    <script type="module" src="dashboard.js"></script>
+    <script type="module" src="userdashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
 
 </html>
